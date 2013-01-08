@@ -5,8 +5,6 @@ test: &default
   app_id: APP-80W284485P519543T
   http_timeout: 30
   mode: sandbox
-  redirect_url: "https://www.sandbox.paypal.com/webscr&cmd="
-  dev_central_url: "https://developer.paypal.com"
 development:
   <<: *default
 
@@ -17,7 +15,6 @@ with_certificate:
   signature:
   cert_path: "spec/config/cert_key.pem"
   app_id: APP-80W284485P519543T
-  soap_end_point: "https://api.sandbox.paypal.com/2.0/"
 
 with_oauth_token:
   <<: *default
